@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "29.0.1"
+    compileSdkVersion compileSdkVer as Integer
+    buildToolsVersion "${buildToolsVer}"
 
     defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 28
+        minSdkVersion minSdkVer as Integer
+        targetSdkVersion targetSdkVer as Integer
         versionCode 1
         versionName "1.0"
         externalNativeBuild {

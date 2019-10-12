@@ -2,16 +2,16 @@ package com.howard.mylibrary;
 
 public class MyLib {
     static {
-        System.loadLibrary("test");
+        System.loadLibrary("mylib");
     }
 
     public MyLib() {
 
     }
 
-    public void test() {
-        nativeTest();
+    public String getText() {
+        return getNativeString() + "+ Hello from Java";
     }
 
-    private native void nativeTest();
+    private native String getNativeString();
 }

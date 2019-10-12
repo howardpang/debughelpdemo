@@ -1,16 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    //compileSdkVersion compileSdkVer as Integer
-    //buildToolsVersion "${buildToolsVer}"
-    compileSdkVersion 28
-    buildToolsVersion "29.0.1"
+    compileSdkVersion compileSdkVer as Integer
+    buildToolsVersion "${buildToolsVer}"
     defaultConfig {
         applicationId "com.howard.debughelpdemo"
-        minSdkVersion 23
-        targetSdkVersion 28
-        //minSdkVersion minSdkVer as Integer
-        //targetSdkVersion targetSdkVer as Integer
+        minSdkVersion minSdkVer as Integer
+        targetSdkVersion targetSdkVer as Integer
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
