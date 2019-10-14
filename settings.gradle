@@ -1,1 +1,23 @@
-include ':app', ':mylibrary'
+include ':mylibrary',':app'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${androidGradlePluginVer}"
+        //Add debughelper dependency
+        classpath 'com.ydq.android.gradle.build.tool:debughelper:1.0.2'
+    }
+}
+ext {
+    hostApk = "${rootDir}/app/build/outputs/apk/debug/app-debug.apk"
+    //hostFlavor = "audio"
+    //updateJavaClass = false
+    //hostLaunchActivity = "com.yy.test.demo.MainActivity"
+    //modifyApkDebuggable = false
+    //excludeSo = "libxx.so;libyy.so"
+}
+//apply plugin: 'com.ydq.android.gradle.debug.helper'
